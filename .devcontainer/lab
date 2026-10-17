@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# `lab <name>`: downloads a training lab's notebook from shuuchuu/labs into the
+# Codespace's folder and opens it. The name is the one the slides give next to the
+# Codespaces link (the notebook's published ID).
+set -euo pipefail
+
+if [ $# -ne 1 ] || [[ ! "${1%.ipynb}" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
+  echo "Usage : lab <nom du notebook, tel que les slides le donnent>" >&2
+  echo "Usage: lab <notebook name, as the slides give it>" >&2
+  exit 2
+fi
+name="${1%.ipynb}"
+file="${CODESPACE_VSCODE_FOLDER:-$PWD}/$name.ipynb"
+if [ -e "$file" ]; then
+  echo "$name.ipynb est déjà là : il s'ouvre tel quel (supprimez-le pour repartir de zéro)."
+  echo "$name.ipynb is already here: it opens as it is (delete it to start over)."
+elif ! curl -fsL -o "$file.part" "https://raw.githubusercontent.com/shuuchuu/labs/main/$name.ipynb"; then
+  rm -f "$file.part"
+  echo "Pas de notebook nommé $name : vérifiez le nom sur la slide." >&2
+  echo "No notebook named $name: check the name on the slide." >&2
+  exit 1
+else
+  mv "$file.part" "$file"
+fi
+code "$file" 2>/dev/null || echo "Ouvrez-le dans l'explorateur / Open it from the explorer: $file"
