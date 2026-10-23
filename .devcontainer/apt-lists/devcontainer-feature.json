@@ -1,0 +1,7 @@
+{
+  "id": "apt-lists",
+  "version": "1.0.0",
+  "name": "apt's package lists",
+  "description": "Refills apt's package lists, which desktop-lite empties, so that a notebook's `!apt install` needs no update.",
+  "installsAfter": ["ghcr.io/devcontainers/features/desktop-lite"]
+}

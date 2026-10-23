@@ -1,0 +1,1149 @@
+absl-py==1.4.0
+    # via
+    #   -c colab-constraints.txt
+    #   keras
+    #   tensorboard
+    #   tensorflow
+annotated-doc==0.0.5
+    # via
+    #   -c colab-constraints.txt
+    #   typer
+annotated-types==0.8.0
+    # via
+    #   -c colab-constraints.txt
+    #   pydantic
+anyio==4.15.1
+    # via
+    #   -c colab-constraints.txt
+    #   google-genai
+    #   httpx
+    #   jupyter-server
+argon2-cffi==25.1.0
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+    #   notebook
+argon2-cffi-bindings==26.1.0
+    # via
+    #   -c colab-constraints.txt
+    #   argon2-cffi
+arrow==1.4.0
+    # via
+    #   -c colab-constraints.txt
+    #   isoduration
+astunparse==1.6.3
+    # via
+    #   -c colab-constraints.txt
+    #   tensorflow
+attrs==26.1.0
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+    #   referencing
+backcall==0.2.0
+    # via
+    #   -c colab-constraints.txt
+    #   ipython
+beautifulsoup4==4.13.5
+    # via
+    #   -c colab-constraints.txt
+    #   nbconvert
+bleach==6.4.0
+    # via
+    #   -c colab-constraints.txt
+    #   nbconvert
+blis==1.3.3
+    # via
+    #   -c colab-constraints.txt
+    #   thinc
+branca==0.8.2
+    # via
+    #   -c colab-constraints.txt
+    #   folium
+catalogue==2.0.10
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+    #   srsly
+    #   thinc
+certifi==2026.7.22
+    # via
+    #   -c colab-constraints.txt
+    #   httpcore
+    #   httpx
+    #   pyogrio
+    #   pyproj
+    #   requests
+cffi==2.1.1
+    # via
+    #   -c colab-constraints.txt
+    #   argon2-cffi-bindings
+    #   cryptography
+charset-normalizer==3.4.9
+    # via
+    #   -c colab-constraints.txt
+    #   requests
+click==8.5.0
+    # via
+    #   -c colab-constraints.txt
+    #   huggingface-hub
+    #   nltk
+    #   spacy
+cloudpathlib==0.25.0
+    # via
+    #   -c colab-constraints.txt
+    #   weasel
+cloudpickle==3.1.2
+    # via
+    #   -c colab-constraints.txt
+    #   gymnasium
+    #   joblib
+    #   shap
+confection==1.3.3
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+    #   thinc
+    #   weasel
+contourpy==1.4.0
+    # via
+    #   -c colab-constraints.txt
+    #   matplotlib
+cryptography==50.0.2
+    # via
+    #   -c colab-constraints.txt
+    #   google-auth
+cycler==0.12.1
+    # via
+    #   -c colab-constraints.txt
+    #   matplotlib
+cymem==2.0.13
+    # via
+    #   -c colab-constraints.txt
+    #   preshed
+    #   spacy
+    #   thinc
+cython==3.0.12
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+debugpy==1.8.15
+    # via
+    #   -c colab-constraints.txt
+    #   ipykernel
+decorator==4.4.2
+    # via
+    #   -c colab-constraints.txt
+    #   ipython
+defusedxml==0.7.1
+    # via
+    #   -c colab-constraints.txt
+    #   nbconvert
+distro==1.9.0
+    # via
+    #   -c colab-constraints.txt
+    #   google-genai
+duckdb==1.3.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+einops==0.8.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+    # via -r requirements.in
+entrypoints==0.4
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-client
+et-xmlfile==2.0.0
+    # via
+    #   -c colab-constraints.txt
+    #   openpyxl
+farama-notifications==0.0.6
+    # via
+    #   -c colab-constraints.txt
+    #   gymnasium
+fastjsonschema==2.22.2
+    # via
+    #   -c colab-constraints.txt
+    #   nbformat
+filelock==4.0.7
+    # via
+    #   -c colab-constraints.txt
+    #   huggingface-hub
+    #   torch
+flatbuffers==25.12.19
+    # via
+    #   -c colab-constraints.txt
+    #   tensorflow
+folium==0.20.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+fonttools==4.66.1
+    # via
+    #   -c colab-constraints.txt
+    #   matplotlib
+formulaic==1.2.2
+    # via
+    #   -c colab-constraints.txt
+    #   statsmodels
+fqdn==1.6.0
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+fsspec==2025.12.0
+    # via
+    #   -c colab-constraints.txt
+    #   huggingface-hub
+    #   torch
+gast==0.7.0
+    # via
+    #   -c colab-constraints.txt
+    #   tensorflow
+geographiclib==2.1
+    # via
+    #   -c colab-constraints.txt
+    #   geopy
+geopandas==1.2.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+geopy==2.4.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+google-auth==2.49.0
+    # via
+    #   -c colab-constraints.txt
+    #   google-genai
+google-genai==2.12.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+google-pasta==0.2.0
+    # via
+    #   -c colab-constraints.txt
+    #   tensorflow
+grpcio==1.84.0
+    # via
+    #   -c colab-constraints.txt
+    #   tensorboard
+    #   tensorflow
+gymnasium==1.3.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+h11==0.16.0
+    # via
+    #   -c colab-constraints.txt
+    #   httpcore
+h5py==3.14.0
+    # via
+    #   -c colab-constraints.txt
+    #   keras
+    #   tensorflow
+hf-xet==1.6.0
+    # via
+    #   -c colab-constraints.txt
+    #   huggingface-hub
+httpcore==1.0.9
+    # via
+    #   -c colab-constraints.txt
+    #   httpx
+httpx==0.28.1
+    # via
+    #   -c colab-constraints.txt
+    #   google-genai
+    #   huggingface-hub
+    #   weasel
+huggingface-hub==1.33.0
+    # via
+    #   -c colab-constraints.txt
+    #   sentence-transformers
+    #   tokenizers
+    #   transformers
+idna==3.20
+    # via
+    #   -c colab-constraints.txt
+    #   anyio
+    #   httpx
+    #   jsonschema
+    #   requests
+imageio==2.38.0
+    # via
+    #   -c colab-constraints.txt
+    #   scikit-image
+imbalanced-learn==0.14.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+interface-meta==2.0.1
+    # via
+    #   -c colab-constraints.txt
+    #   formulaic
+ipykernel==6.17.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   ipywidgets
+    #   nbclassic
+    #   notebook
+ipython==7.34.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   ipykernel
+    #   ipywidgets
+ipython-genutils==0.2.0
+    # via
+    #   -c colab-constraints.txt
+    #   ipywidgets
+    #   nbclassic
+    #   notebook
+ipywidgets==7.7.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+isoduration==20.11.0
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+jedi==0.20.1
+    # via ipython
+jinja2==3.1.6
+    # via
+    #   -c colab-constraints.txt
+    #   branca
+    #   folium
+    #   jupyter-server
+    #   nbconvert
+    #   notebook
+    #   spacy
+    #   torch
+joblib==1.6.0
+    # via
+    #   -c colab-constraints.txt
+    #   imbalanced-learn
+    #   nltk
+    #   pynndescent
+    #   scikit-learn
+jsonpointer==3.1.1
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+jsonschema==4.26.0
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-events
+    #   nbformat
+jsonschema-specifications==2025.9.1
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+jupyter-client==7.4.9
+    # via
+    #   -c colab-constraints.txt
+    #   ipykernel
+    #   jupyter-server
+    #   nbclient
+    #   notebook
+jupyter-core==5.9.1
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-client
+    #   jupyter-server
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+    #   notebook
+jupyter-events==0.12.1
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+jupyter-server==2.20.0
+    # via
+    #   -c colab-constraints.txt
+    #   notebook-shim
+jupyter-server-terminals==0.5.4
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+jupyterlab-pygments==0.3.0
+    # via
+    #   -c colab-constraints.txt
+    #   nbconvert
+jupyterlab-widgets==3.0.17
+    # via
+    #   -c colab-constraints.txt
+    #   ipywidgets
+keras==3.13.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   tensorflow
+kiwisolver==1.5.1
+    # via
+    #   -c colab-constraints.txt
+    #   matplotlib
+lark==1.3.1
+    # via
+    #   -c colab-constraints.txt
+    #   rfc3987-syntax
+lazy-loader==0.6
+    # via
+    #   -c colab-constraints.txt
+    #   scikit-image
+libclang==18.1.1
+    # via
+    #   -c colab-constraints.txt
+    #   tensorflow
+llvmlite==0.44.0
+    # via
+    #   -c colab-constraints.txt
+    #   numba
+    #   pynndescent
+    #   shap
+markdown==3.11
+    # via
+    #   -c colab-constraints.txt
+    #   tensorboard
+markdown-it-py==4.2.0
+    # via
+    #   -c colab-constraints.txt
+    #   rich
+markupsafe==3.0.3
+    # via
+    #   -c colab-constraints.txt
+    #   jinja2
+    #   nbconvert
+    #   werkzeug
+matplotlib==3.10.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   seaborn
+matplotlib-inline==0.2.2
+    # via
+    #   -c colab-constraints.txt
+    #   ipykernel
+    #   ipython
+mdurl==0.1.2
+    # via
+    #   -c colab-constraints.txt
+    #   markdown-it-py
+mistune==3.3.4
+    # via
+    #   -c colab-constraints.txt
+    #   nbconvert
+ml-dtypes==0.6.0
+    # via
+    #   -c colab-constraints.txt
+    #   keras
+    #   tensorflow
+more-itertools==10.8.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+mpmath==1.3.0
+    # via
+    #   -c colab-constraints.txt
+    #   sympy
+murmurhash==1.0.15
+    # via
+    #   -c colab-constraints.txt
+    #   preshed
+    #   spacy
+    #   thinc
+namex==0.1.0
+    # via
+    #   -c colab-constraints.txt
+    #   keras
+narwhals==2.26.0
+    # via
+    #   -c colab-constraints.txt
+    #   formulaic
+nbclassic==1.3.3
+    # via
+    #   -c colab-constraints.txt
+    #   notebook
+nbclient==0.10.4
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   nbconvert
+nbconvert==7.17.1
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+    #   notebook
+nbformat==5.11.1
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+    #   nbclient
+    #   nbconvert
+    #   notebook
+nest-asyncio==1.6.0
+    # via
+    #   -c colab-constraints.txt
+    #   ipykernel
+    #   jupyter-client
+    #   nbclassic
+    #   notebook
+networkx==3.7
+    # via
+    #   -c colab-constraints.txt
+    #   scikit-image
+    #   torch
+nltk==3.9.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+notebook==6.5.7
+    # via
+    #   -c colab-constraints.txt
+    #   widgetsnbextension
+notebook-shim==0.2.4
+    # via
+    #   -c colab-constraints.txt
+    #   nbclassic
+numba==0.61.2
+    # via
+    #   -c colab-constraints.txt
+    #   pynndescent
+    #   shap
+    #   umap-learn
+numpy==2.1.3
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   blis
+    #   contourpy
+    #   folium
+    #   formulaic
+    #   geopandas
+    #   gymnasium
+    #   h5py
+    #   imageio
+    #   imbalanced-learn
+    #   keras
+    #   matplotlib
+    #   ml-dtypes
+    #   numba
+    #   opencv-python
+    #   pandas
+    #   patsy
+    #   pyogrio
+    #   scikit-image
+    #   scikit-learn
+    #   scipy
+    #   seaborn
+    #   sentence-transformers
+    #   shap
+    #   shapely
+    #   spacy
+    #   statsmodels
+    #   tensorboard
+    #   tensorflow
+    #   thinc
+    #   tifffile
+    #   torchvision
+    #   transformers
+    #   umap-learn
+    #   xgboost
+nvidia-nccl-cu13==2.32.3
+    # via
+    #   -c colab-constraints.txt
+    #   xgboost
+opencv-python==5.0.0.93
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+openpyxl==3.1.5
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+opt-einsum==3.4.0
+    # via
+    #   -c colab-constraints.txt
+    #   tensorflow
+optree==0.20.0
+    # via
+    #   -c colab-constraints.txt
+    #   keras
+packaging==26.3
+    # via
+    #   -c colab-constraints.txt
+    #   geopandas
+    #   huggingface-hub
+    #   ipykernel
+    #   jupyter-events
+    #   jupyter-server
+    #   keras
+    #   lazy-loader
+    #   matplotlib
+    #   nbconvert
+    #   patsy
+    #   plotly
+    #   pyogrio
+    #   scikit-image
+    #   shap
+    #   spacy
+    #   statsmodels
+    #   tensorboard
+    #   tensorflow
+    #   thinc
+    #   transformers
+    #   weasel
+    #   wheel
+pandas==2.2.3
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   formulaic
+    #   geopandas
+    #   seaborn
+    #   shap
+    #   statsmodels
+pandocfilters==1.5.1
+    # via
+    #   -c colab-constraints.txt
+    #   nbconvert
+parso==0.8.7
+    # via
+    #   -c colab-constraints.txt
+    #   jedi
+patsy==1.0.3
+    # via
+    #   -c colab-constraints.txt
+    #   statsmodels
+pexpect==4.9.0
+    # via
+    #   -c colab-constraints.txt
+    #   ipython
+pickleshare==0.7.5
+    # via
+    #   -c colab-constraints.txt
+    #   ipython
+pillow==11.3.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   imageio
+    #   matplotlib
+    #   scikit-image
+    #   tensorboard
+    #   torchvision
+pip==24.1.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+platformdirs==4.12.2
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-core
+plotly==5.24.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+polars==1.35.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+polars-runtime-32==1.35.2
+    # via
+    #   -c colab-constraints.txt
+    #   polars
+preshed==3.0.13
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+    #   thinc
+prometheus-client==0.26.0
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+    #   notebook
+prompt-toolkit==3.0.53
+    # via
+    #   -c colab-constraints.txt
+    #   ipython
+protobuf==6.33.6
+    # via
+    #   -c colab-constraints.txt
+    #   tensorboard
+    #   tensorflow
+psutil==5.9.5
+    # via
+    #   -c colab-constraints.txt
+    #   ipykernel
+ptyprocess==0.7.0
+    # via
+    #   -c colab-constraints.txt
+    #   pexpect
+    #   terminado
+py4j==0.10.9.9
+    # via
+    #   -c colab-constraints.txt
+    #   pyspark
+pyarrow==23.0.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+pyasn1==0.6.4
+    # via
+    #   -c colab-constraints.txt
+    #   pyasn1-modules
+    #   rsa
+pyasn1-modules==0.4.2
+    # via
+    #   -c colab-constraints.txt
+    #   google-auth
+pycparser==3.0
+    # via
+    #   -c colab-constraints.txt
+    #   cffi
+pydantic==2.13.5
+    # via
+    #   -c colab-constraints.txt
+    #   google-genai
+    #   spacy
+    #   thinc
+    #   weasel
+pydantic-core==2.46.5
+    # via
+    #   -c colab-constraints.txt
+    #   pydantic
+pygments==2.21.0
+    # via
+    #   -c colab-constraints.txt
+    #   ipython
+    #   nbconvert
+    #   rich
+pynndescent==0.6.0
+    # via
+    #   -c colab-constraints.txt
+    #   umap-learn
+pyogrio==0.13.0
+    # via
+    #   -c colab-constraints.txt
+    #   geopandas
+pyparsing==3.3.3
+    # via
+    #   -c colab-constraints.txt
+    #   matplotlib
+pyproj==3.8.0
+    # via
+    #   -c colab-constraints.txt
+    #   geopandas
+pyspark==4.0.4
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+python-dateutil==2.9.0.post0
+    # via
+    #   -c colab-constraints.txt
+    #   arrow
+    #   jupyter-client
+    #   matplotlib
+    #   pandas
+python-json-logger==4.2.0
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-events
+pytz==2025.2
+    # via
+    #   -c colab-constraints.txt
+    #   pandas
+pyyaml==6.0.3
+    # via
+    #   -c colab-constraints.txt
+    #   huggingface-hub
+    #   jupyter-events
+    #   transformers
+pyzmq==26.2.1
+    # via
+    #   -c colab-constraints.txt
+    #   ipykernel
+    #   jupyter-client
+    #   jupyter-server
+    #   notebook
+referencing==0.37.0
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+    #   jsonschema-specifications
+    #   jupyter-events
+regex==2025.11.3
+    # via
+    #   -c colab-constraints.txt
+    #   nltk
+    #   transformers
+requests==2.32.4
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   folium
+    #   google-auth
+    #   google-genai
+    #   spacy
+    #   tensorflow
+rfc3339-validator==0.1.4
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+    #   jupyter-events
+rfc3986-validator==0.1.1
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+    #   jupyter-events
+rfc3987-syntax==1.1.0
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+rich==13.9.4
+    # via
+    #   -c colab-constraints.txt
+    #   keras
+    #   typer
+rpds-py==2026.6.3
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+    #   referencing
+rsa==4.9.1
+    # via
+    #   -c colab-constraints.txt
+    #   google-auth
+safetensors==0.8.0
+    # via
+    #   -c colab-constraints.txt
+    #   transformers
+scikit-image==0.25.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+scikit-learn==1.6.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   imbalanced-learn
+    #   pynndescent
+    #   sentence-transformers
+    #   shap
+    #   sklearn-compat
+    #   umap-learn
+scipy==1.16.3
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   formulaic
+    #   imbalanced-learn
+    #   pynndescent
+    #   scikit-image
+    #   scikit-learn
+    #   sentence-transformers
+    #   shap
+    #   statsmodels
+    #   umap-learn
+    #   xgboost
+seaborn==0.13.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+send2trash==2.1.0
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+    #   notebook
+sentence-transformers==5.7.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+setuptools==80.10.2
+    # via
+    #   -c colab-constraints.txt
+    #   ipython
+    #   spacy
+    #   tensorboard
+    #   tensorflow
+    #   thinc
+    #   torch
+shap==0.52.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+shapely==2.1.2
+    # via
+    #   -c colab-constraints.txt
+    #   geopandas
+shellingham==1.5.4
+    # via
+    #   -c colab-constraints.txt
+    #   typer
+six==1.17.0
+    # via
+    #   -c colab-constraints.txt
+    #   astunparse
+    #   google-pasta
+    #   python-dateutil
+    #   rfc3339-validator
+    #   tensorflow
+sklearn-compat==0.1.6
+    # via
+    #   -c colab-constraints.txt
+    #   imbalanced-learn
+slicer==0.0.8
+    # via
+    #   -c colab-constraints.txt
+    #   shap
+smart-open==8.0.2
+    # via
+    #   -c colab-constraints.txt
+    #   weasel
+sniffio==1.3.1
+    # via
+    #   -c colab-constraints.txt
+    #   google-genai
+soupsieve==2.10
+    # via
+    #   -c colab-constraints.txt
+    #   beautifulsoup4
+spacy==3.8.16
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+spacy-legacy==3.0.12
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+spacy-loggers==1.0.5
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+sqlalchemy==2.1.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+srsly==2.5.4
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+    #   thinc
+    #   weasel
+statsmodels==0.15.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+sympy==1.14.0
+    # via
+    #   -c colab-constraints.txt
+    #   torch
+tenacity==9.1.4
+    # via
+    #   -c colab-constraints.txt
+    #   google-genai
+    #   plotly
+tensorboard==2.21.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+tensorboard-data-server==0.7.2
+    # via
+    #   -c colab-constraints.txt
+    #   tensorboard
+tensorflow==2.21.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+termcolor==3.3.0
+    # via
+    #   -c colab-constraints.txt
+    #   tensorflow
+terminado==0.18.1
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+    #   jupyter-server-terminals
+    #   notebook
+thinc==8.3.13
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+threadpoolctl==3.7.0
+    # via
+    #   -c colab-constraints.txt
+    #   imbalanced-learn
+    #   scikit-learn
+tifffile==2026.9.20
+    # via
+    #   -c colab-constraints.txt
+    #   scikit-image
+tinycss2==1.5.1
+    # via
+    #   -c colab-constraints.txt
+    #   bleach
+tokenizers==0.23.2
+    # via
+    #   -c colab-constraints.txt
+    #   sentence-transformers
+    #   transformers
+torch==2.11.0+cpu
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   sentence-transformers
+    #   torchvision
+torchvision==0.26.0+cpu
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+tornado==6.5.7
+    # via
+    #   -c colab-constraints.txt
+    #   ipykernel
+    #   jupyter-client
+    #   jupyter-server
+    #   notebook
+    #   terminado
+tqdm==4.67.3
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   huggingface-hub
+    #   nltk
+    #   sentence-transformers
+    #   shap
+    #   spacy
+    #   transformers
+    #   umap-learn
+traitlets==5.7.1
+    # via
+    #   -c colab-constraints.txt
+    #   ipykernel
+    #   ipython
+    #   ipywidgets
+    #   jupyter-client
+    #   jupyter-core
+    #   jupyter-events
+    #   jupyter-server
+    #   matplotlib-inline
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+    #   notebook
+transformers==5.18.0
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+    #   sentence-transformers
+typer==0.27.2
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+    #   transformers
+    #   weasel
+typing-extensions==4.16.0
+    # via
+    #   -c colab-constraints.txt
+    #   anyio
+    #   beautifulsoup4
+    #   formulaic
+    #   google-genai
+    #   grpcio
+    #   gymnasium
+    #   huggingface-hub
+    #   optree
+    #   pydantic
+    #   pydantic-core
+    #   sentence-transformers
+    #   sqlalchemy
+    #   tensorflow
+    #   torch
+    #   typing-inspection
+typing-inspection==0.4.4
+    # via
+    #   -c colab-constraints.txt
+    #   pydantic
+tzdata==2026.4
+    # via
+    #   -c colab-constraints.txt
+    #   arrow
+    #   pandas
+umap-learn==0.5.12
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+uri-template==1.3.0
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+urllib3==2.5.0
+    # via
+    #   -c colab-constraints.txt
+    #   requests
+wasabi==1.1.3
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+    #   thinc
+    #   weasel
+wcwidth==0.9.1
+    # via
+    #   -c colab-constraints.txt
+    #   prompt-toolkit
+weasel==1.0.0
+    # via
+    #   -c colab-constraints.txt
+    #   spacy
+webcolors==25.10.0
+    # via
+    #   -c colab-constraints.txt
+    #   jsonschema
+webencodings==0.6.1
+    # via
+    #   -c colab-constraints.txt
+    #   bleach
+    #   tinycss2
+websocket-client==1.9.2
+    # via
+    #   -c colab-constraints.txt
+    #   jupyter-server
+websockets==15.0.1
+    # via
+    #   -c colab-constraints.txt
+    #   google-genai
+werkzeug==3.1.9
+    # via
+    #   -c colab-constraints.txt
+    #   tensorboard
+wheel==0.48.0
+    # via
+    #   -c colab-constraints.txt
+    #   astunparse
+widgetsnbextension==3.6.10
+    # via
+    #   -c colab-constraints.txt
+    #   ipywidgets
+wrapt==2.5.0
+    # via
+    #   -c colab-constraints.txt
+    #   formulaic
+    #   smart-open
+    #   tensorflow
+xgboost==3.4.1
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+xlrd==2.0.2
+    # via
+    #   -c colab-constraints.txt
+    #   -r requirements.in
+xyzservices==2026.9.1
+    # via
+    #   -c colab-constraints.txt
+    #   folium

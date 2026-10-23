@@ -1,0 +1,56 @@
+# The packages the Codespace of shuuchuu/labs installs: those Colab preinstalls that
+# the notebooks without a GPU import, at Colab's versions. requirements.txt is this
+# list compiled against Colab's own package list: after editing it, run
+# `uv run python labs/scripts/colab_requirements.py` in shuuchuu/slides (see its
+# labs/README.md, "Codespaces"). A package Colab lacks is installed by the notebook
+# itself (`!pip install`), as in Colab: don't list it here.
+# pandas' optional engines count as imports: a notebook calling read_parquet or
+# read_excel needs pyarrow, openpyxl or xlrd although it never imports them.
+cython
+duckdb
+einops
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+folium
+geopandas
+geopy
+google-genai
+gymnasium
+imbalanced-learn
+ipykernel
+ipython
+ipywidgets
+keras
+matplotlib
+# Runs the notebooks for `deckz labs check --container`.
+nbclient
+more-itertools
+nltk
+numpy
+opencv-python
+openpyxl
+pandas
+pillow
+pip
+plotly
+polars
+pyarrow
+pyspark
+requests
+scikit-image
+scikit-learn
+scipy
+seaborn
+sentence-transformers
+shap
+spacy
+sqlalchemy
+statsmodels
+tensorboard
+tensorflow
+torch
+torchvision
+tqdm
+transformers
+umap-learn
+xgboost
+xlrd

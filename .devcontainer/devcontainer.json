@@ -1,0 +1,37 @@
+{
+  "name": "Labs (Colab CPU)",
+  "image": "ghcr.io/shuuchuu/labs-codespace:2e82293a71c1",
+  "remoteUser": "root",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb"
+  },
+  "forwardPorts": [
+    6080
+  ],
+  "portsAttributes": {
+    "6080": {
+      "label": "Bureau / Desktop",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/python/current/bin/python"
+      }
+    },
+    "deckz": {
+      "dockerfile": "Dockerfile"
+    }
+  }
+}
