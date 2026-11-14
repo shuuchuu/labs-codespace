@@ -1,0 +1,165 @@
+#!/usr/bin/env python3
+"""`lab <words>`: download a training lab's notebook into the Codespace and open it.
+
+The slides give the command next to the Codespaces link: a few words of the
+notebook's published ID (`lab wine en` for
+`dimensionality-reduction-wine-dimensionality-reduction-hands-on-en`), or the
+whole ID when no fewer words single it out. The words name the notebook of
+shuuchuu/labs whose ID is exactly them, joined by dashes, or else the one whose
+ID holds them all as dash-separated words. When a notebook published after the
+slides makes them ambiguous, the command lists the matches to choose from.
+
+The slides' build (`lab_links`, templates/jinja2/env.py) loads this file to pick
+each notebook's words with `key`, so both read IDs the same way.
+"""
+
+import itertools
+import json
+import os
+import re
+import subprocess
+import sys
+import urllib.error
+import urllib.request
+from functools import cache
+from pathlib import Path
+
+REPO = "shuuchuu/labs"
+SUFFIX_RE = re.compile(r"-(hands-on|demo)-(fr|en)$")
+FOLD_SOLUTIONS = "/opt/fold-solutions.vsix"
+
+
+def words(text: str) -> list[str]:
+  """The dash-separated words of an ID, or of what a trainee typed.
+
+  Returns:
+      Them, lowercased, without a `.ipynb` suffix.
+  """
+  return [w for w in re.split(r"[\s-]+", text.lower().removesuffix(".ipynb")) if w]
+
+
+@cache
+def word_set(lab_id: str) -> frozenset[str]:
+  return frozenset(words(lab_id))
+
+
+def resolve(typed: list[str], ids: list[str]) -> list[str]:
+  """The IDs `typed` (see `words`) names: the exact one, or those holding them all.
+
+  Returns:
+      One ID when they single it out, several when ambiguous, none when nothing matches.
+  """
+  if (exact := "-".join(typed)) in ids:
+    return [exact]
+  return [i for i in ids if word_set(i).issuperset(typed)]
+
+
+def key(lab_id: str, ids: list[str]) -> str:
+  """The fewest words of `lab_id` that `resolve` maps to it alone, as slides print them.
+
+  Words of the lab's name, then its language, and its type before it if needed;
+  among as many words, the longest, which read best (`weather fr` rather than
+  `max fr`). The ID itself when the words would be all of it.
+
+  Returns:
+      The words, space-separated (`hands-on` as one word).
+  """
+  match = SUFFIX_RE.search(lab_id)
+  if match is None:
+    return lab_id
+  name = list(dict.fromkeys(words(lab_id[: match.start()])))
+  lab_type, lang = match.groups()
+  for n in range(1, len(name) + 1):
+    keys = [
+      [*combo, *suffix]
+      for combo in itertools.combinations(name, n)
+      for suffix in ([lang], [lab_type, lang])
+    ]
+    keys.sort(key=lambda k: (len(k), -len("".join(k))))
+    for k in keys:
+      if resolve(words(" ".join(k)), ids) == [lab_id]:
+        return lab_id if len(k) == len(name) + 2 else " ".join(k)
+  return lab_id
+
+
+def published_ids() -> list[str]:
+  """The IDs of the notebooks published on shuuchuu/labs's main.
+
+  Returns:
+      Them, sorted.
+  """
+  request = urllib.request.Request(
+    f"https://api.github.com/repos/{REPO}/git/trees/main",
+    headers={"Accept": "application/vnd.github+json"},
+  )
+  # Codespaces sets a token, which lifts the API's limit of 60 calls an hour per IP.
+  if token := os.environ.get("GITHUB_TOKEN"):
+    request.add_header("Authorization", f"Bearer {token}")
+  with urllib.request.urlopen(request, timeout=30) as response:
+    tree = json.load(response)["tree"]
+  return sorted(
+    e["path"].removesuffix(".ipynb") for e in tree if e["path"].endswith(".ipynb")
+  )
+
+
+def choose(matches: list[str]) -> str | None:
+  """Ask which of several matching IDs to open.
+
+  Returns:
+      The one chosen, or None if stdin isn't a terminal or the answer no number.
+  """
+  print("Plusieurs notebooks correspondent / Several notebooks match:")
+  for i, lab_id in enumerate(matches, 1):
+    print(f"  {i}. {lab_id}")
+  if not sys.stdin.isatty():
+    return None
+  answer = input("Numéro / Number: ").strip()
+  if answer.isdigit() and 1 <= int(answer) <= len(matches):
+    return matches[int(answer) - 1]
+  return None
+
+
+def main() -> int:
+  typed = words(" ".join(sys.argv[1:]))
+  if not typed:
+    print(
+      "Usage : lab <nom du notebook, tel que les slides le donnent>", file=sys.stderr
+    )
+    print("Usage: lab <notebook name, as the slides give it>", file=sys.stderr)
+    return 2
+  try:
+    matches = resolve(typed, published_ids())
+  except (urllib.error.URLError, TimeoutError) as e:
+    print(f"GitHub injoignable / GitHub unreachable: {e}", file=sys.stderr)
+    return 1
+  if not matches:
+    print(f"Pas de notebook « {' '.join(typed)} » : vérifiez le nom sur la slide.")
+    print(f"No notebook '{' '.join(typed)}': check the name on the slide.")
+    return 1
+  lab_id = matches[0] if len(matches) == 1 else choose(matches)
+  if lab_id is None:
+    return 1
+  file = Path(os.environ.get("CODESPACE_VSCODE_FOLDER", Path.cwd())) / f"{lab_id}.ipynb"
+  if file.exists():
+    print(
+      f"{file.name} est déjà là : il s'ouvre tel quel (supprimez-le pour recommencer)."
+    )
+    print(f"{file.name} is already here: it opens as it is (delete it to start over).")
+  else:
+    url = f"https://raw.githubusercontent.com/{REPO}/main/{file.name}"
+    with urllib.request.urlopen(url, timeout=60) as response:
+      file.write_bytes(response.read())
+  try:
+    # Folds the hints and solutions as Colab collapses them (the image's Dockerfile).
+    # Already installed, it does nothing; installed now, it folds the notebook opening.
+    subprocess.run(
+      ["code", "--install-extension", FOLD_SOLUTIONS], capture_output=True, check=False
+    )
+    subprocess.run(["code", str(file)], check=True)
+  except (OSError, subprocess.CalledProcessError):
+    print(f"Ouvrez-le dans l'explorateur / Open it from the explorer: {file}")
+  return 0
+
+
+if __name__ == "__main__":
+  sys.exit(main())

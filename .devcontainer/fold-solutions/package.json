@@ -1,0 +1,15 @@
+{
+  "name": "fold-solutions",
+  "displayName": "Fold the labs' solutions",
+  "description": "Folds a notebook's hints and solutions when it opens, as Colab collapses them.",
+  "publisher": "shuuchuu",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onNotebook:jupyter-notebook"
+  ],
+  "main": "./extension.js"
+}
